@@ -1,0 +1,3 @@
+// Methods of string:
+
+// Finished.

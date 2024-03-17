@@ -1,0 +1,58 @@
+<!-- Debouncing is a technique used to delay the execution of a function until a specified period of inactivity has passed since the last invocation of that function.  -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Debauncing</title>
+</head>
+<style>
+  body {
+    height: 200vh;
+  }
+
+  div {
+    position: fixed;
+  }
+
+  p {
+    font-size: 2rem;
+  }
+</style>
+
+<body onscroll="showCount()">
+  <div>
+    <p class="normalCount">Normal Count</p>
+    <p class="debounceCount">Debounce Count</p>
+  </div>
+
+  <script>
+    const normal_paragraph = document.querySelector('.normalCount');
+    const debounce_paragraph = document.querySelector('.debounceCount');
+    let normal_count = 0;
+    let debounce_count = 0;
+
+    const normalCount = () => {
+      normal_count++;
+      normal_paragraph.innerHTML = `Normal Count: ${normal_count}`;
+    };
+
+    let interval;
+    const debounceCount = () => {
+      if (interval) clearTimeout(interval);
+      interval = setTimeout(() => {
+        debounce_count++;
+        debounce_paragraph.innerHTML = `Debounce Count: ${debounce_count}`;
+      }, 1000);
+    };
+
+    const showCount = () => {
+      normalCount();
+      debounceCount();
+    };
+  </script>
+</body>
+
+</html>

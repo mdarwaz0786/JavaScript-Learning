@@ -1,0 +1,61 @@
+<!-- Throttling is used to call a function after a particular interval of time only the first click is executed immediately. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Throttling</title>
+</head>
+<style>
+  body {
+    height: 200vh;
+  }
+
+  div {
+    position: fixed;
+  }
+
+  p {
+    font-size: 2rem;
+  }
+</style>
+
+<body onscroll="showCount()">
+  <div>
+    <p class="normalCount">Normal Count</p>
+    <p class="throttleCount">Throttle Count</p>
+  </div>
+
+  <script>
+    const normal_paragraph = document.querySelector('.normalCount');
+    const throttle_paragraph = document.querySelector('.throttleCount');
+    let normal_count = 0;
+    let throttle_count = 0;
+    let isScrolling = true;
+
+    const normalCount = () => {
+      normal_count++;
+      normal_paragraph.innerHTML = `Normal Count: ${normal_count}`;
+    };
+
+    const throttleCount = () => {
+      if (isScrolling) {
+        throttle_count++;
+        throttle_paragraph.innerHTML = `Throttle Count: ${throttle_count}`;
+        isScrolling = false;
+        setTimeout(() => {
+          isScrolling = true;
+        }, 1000);
+      };
+    };
+
+    const showCount = () => {
+      normalCount();
+      throttleCount();
+    };
+  </script>
+</body>
+
+</html>

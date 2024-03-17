@@ -1,0 +1,34 @@
+// JSON:
+// JSON stands for JavaScript Object Notation.
+// JSON is a text format for storing and transporting data.
+// JSON is language indenpendent.
+
+// JSON value must be one of the following data type:
+// string
+// number
+// object
+// array
+// boolean
+// null
+
+// JSON value cannot be one of the following data type:
+// function
+// date
+// undefined
+
+// JSON Array:
+// use to store list of value.
+// value must separated by comma and value can be of any type.
+// [1, 2, 3];
+
+// JSON Object:
+// JSON Object holds data in the form of key-value pair.
+// each key is represented as a string in JSON and value can be of any type and key always be a string.
+// {
+//     "name": "Arwaz",
+//     "work": "engineer"
+// };
+
+// Finished.
+
+

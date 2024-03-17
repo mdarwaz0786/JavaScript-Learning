@@ -1,0 +1,28 @@
+[
+  {
+    "name": "Arwaz",
+    "phone": [9547537675, 9976565624],
+    "laptop": {
+      "company": "ASUS",
+      "price": 26000
+    }
+  },
+
+  {
+    "name": "Rahul",
+    "phone": [9947537675, 9766565624],
+    "laptop": {
+      "company": "DELL",
+      "price": 30000
+    }
+  },
+
+  {
+    "name": "Adarsh",
+    "phone": [9647537675, 9876565624],
+    "laptop": {
+      "company": "LENOVO",
+      "price": 35000
+    }
+  }
+]
